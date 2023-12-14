@@ -18,7 +18,7 @@ def separate_transcripts_with_same_cmp_ref_geneID(gtf_list):
 
 
 # Define file paths
-cmp_ref_data_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/cmp_ref_data.json'
+cmp_ref_data_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/cmp_ref_data_after_replace_key_trackingFile.json'
 reference_gtf_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/gene_id_data.json'
 
 
@@ -50,8 +50,8 @@ with open(reference_gtf_path, 'r') as file:
     reference_data = json.load(file)
 
 # Process each cmp_ref_data, type is key and value
-for cmp_ref_full, lines in cmp_ref_data.items():
-    cmp_ref = cmp_ref_full.split('.')[0]
+for cmp_ref, lines in cmp_ref_data.items():
+    #cmp_ref = cmp_ref_full.split('.')[0]
 
     if cmp_ref in reference_data:
         cmp_ref_value = separate_transcripts_with_same_cmp_ref_geneID(lines)

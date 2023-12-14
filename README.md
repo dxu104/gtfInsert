@@ -1,4 +1,28 @@
 # gffInsert
+Prase the transcript from XXX.combined.gtf into a ready insert status
+1. run find_overlap_transcript.py
+2. run parse_gtf_to_dict_by_cmp_ref.py (first layer dict)
+3. run extract_key_value_pairs.py (from tracking file generated from gffcompare)
+4. run check_key_unique.py (optional)
+5. run update_keys_with_trackingkeyvaluepair.py (replace wrong transcriptID (as key) with correct geneID)
+   
+Prase the reference gtf into a json to be inserted
+1. run parse_gtf_to_dict.py
+
+Create the transcript start position as key (second layer dict)
+1. run separate_transcripts_with_same_cmp_ref_geneID 
+
+Insert specific new transcript into a reference gtf. Like insert a biology book，whose cover (key) have geneID and transcript ID into a library which is analogous  reference gtf, this library have biology area, like gene ID which is larger scope and specific shelf, which is small area, like transcript ID.  geneID and transcript ID is consider the index, we can use to insert quickly and precisely 
+1. run insert_by_start_position.py
+
+Parse back to gtf
+
+1. run parse_json_gtf.py
+
+
+
+Append those unknown transcript with code letter {r u i p y} into the tail of final gtf
+1. run appenfind_novel_transcripts.py
 
 
 
