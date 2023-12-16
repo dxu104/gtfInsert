@@ -15,6 +15,7 @@ def find_novel_transcripts(combined_gtf_path, reference_gtf_path, output_gtf_pat
 
         # Check for transcript lines with novel class codes
         if fields[2] == "transcript" and 'class_code "' in fields[8]:
+            
             class_code = fields[8].split('class_code "')[1][0]
             target_class_code = class_code in novel_class_codes
             # If current transcript is novel, keep the transcript and subsequent exon lines

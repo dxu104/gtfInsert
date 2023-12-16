@@ -22,13 +22,13 @@ def parse_gtf_to_dict(file_path):
     return gene_data
 
 # Path to the GTF file
-#gtf_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/AmexT_v47.chr.unscaffolded.CherryGFP.gtf'
-gtf_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/readyInsert.gtf'
+gtf_path = '/Users/dxu/Documents/axolotlOmics/AmexT_v47-AmexG_v6.0-DD.gtf'
+#gtf_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/readyInsert.gtf'
 # Parse the GTF file to a dictionary
 gene_id_dict = parse_gtf_to_dict(gtf_path)
 
 # Saving the parsed dictionary to a JSON file
-output_json_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/novel_transcript.json'
+output_json_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/gene_id_data.json'
 with open(output_json_path, 'w') as json_file:
     json.dump(gene_id_dict, json_file, indent=4)
 

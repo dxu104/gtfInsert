@@ -18,6 +18,6 @@ def check_unique_keys(json_file):
 # You can run this function with the path to your JSON file to check if all keys are unique.
 
 
-json_file_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/keyvalue.json'
+json_file_path = '/Users/dxu/Documents/compareJoelGTFwithMyGTF/updateGeneID/outputFromGffcompare/cmp_ref_data.json'
 are_keys_unique = check_unique_keys(json_file_path)
 print("Are all keys unique?", are_keys_unique)
